@@ -1,9 +1,13 @@
+<script setup>
+import TakeTestBtn from "../components/TakeTestBtn.vue";
+</script>
+
 <template>
     <section class="hero_section">
       <p class="hero_section--text">Пройдите точный и быстрый</p>
       <div class="hero_section_content">
         <h1 class="hero_section_content--title">Тест на определение IQ</h1>
-        <button class="hero_section--button">Пройти тест</button>
+        <TakeTestBtn class="hero_section--button" />
       </div>
       <p class="hero_section--text hero_section--subtext">
         <span class="accent-text">И получите рекомендации по развитию своего интеллекта</span> и улучшению финансового благосостояния
@@ -36,6 +40,10 @@
   padding-right: 48px;
 }
 
+.hero_section--button {
+  margin-bottom: 22px;
+}
+
 .hero_section_content--title {
   font-size: 30px;
   letter-spacing: 3%;
@@ -47,19 +55,6 @@
   font-weight: semibold;
   color: var(--accent-color);
   text-transform: uppercase;
-}
-
-.hero_section--button {
-  font-size: 14px;
-  font-weight: bold;
-  color: black;
-  background-color: var(--accent-color);
-  margin-bottom: 22px;
-  width: 190px;
-  padding: 10px;
-  text-transform: uppercase;
-  border-radius: 20px;
-  font-family: "Merriweather", serif;
 }
 
 .hero_section--text {
