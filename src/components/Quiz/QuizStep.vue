@@ -1,13 +1,18 @@
 <template>
   <div v-if="step === currentStep">
     <QuestionText v-if="question.type === 'text'" :question="question" @answer="answer" />
-    <QuestionColor v-else-if="question.type === 'color'" :question="question.question" :options="question.options" @answer="answer"/>
+    <QuestionColor
+      v-else-if="question.type === 'color'"
+      :question="question.text"
+      :options="question.options"
+      @answer="answer"
+    />
   </div>
 </template>
 
 <script>
-import QuestionText from './QuestionText.vue';
-import QuestionColor from './QuestionColor.vue';
+import QuestionText from './QuestionText.vue'
+import QuestionColor from './QuestionColor.vue'
 
 export default {
   components: {
@@ -21,9 +26,9 @@ export default {
   },
   methods: {
     answer(answer) {
-      this.$emit('answer', this.step, answer);
-      this.$emit('nextStep');
+      this.$emit('answer', this.step, answer)
+      this.$emit('nextStep')
     }
   }
-};
+}
 </script>

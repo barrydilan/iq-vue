@@ -31,7 +31,8 @@ export default {
         { type: 'text', text: 'Укажите ваш возраст:', options: ['До 18', 'От 18 до 28', 'От 29 до 35', 'От 36'] },
         { type: 'text', text: 'Выбери лишнее:', options: ['Дом', 'Шалаш', 'Скамейка', 'Хижина'] },
         { type: 'text', text: 'Продолжите числовой ряд: 18 20 24 32', options: ['62', '48', '74', '57', '60', '77'] },
-        { type: 'color', question: 'Choose a color:', options: ['red', 'green', 'blue'] }
+        { type: 'color', text: 'Выберите цвет, который сейчас наиболее Вам приятен:', options: ['grey', 'blue', 'green','red', 'yellow', 'brown','black', 'pink', 'teal'] },
+        { type: 'color', text: 'Отдохните пару секунд, еще раз Выберите цвет, который сейчас наиболее Вам приятен:', options: ['grey', 'blue', 'green','red', 'yellow', 'brown','black', 'pink', 'teal'] }
       ]
     };
   },
@@ -47,6 +48,7 @@ export default {
       }
     },
     answerQuestion(step, answer) {
+      console.log("first")
       this.answers[step] = answer;
     }
   }
