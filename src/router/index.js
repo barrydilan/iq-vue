@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import QuizView from '../views/QuizView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,7 +11,14 @@ const router = createRouter({
       components: {
         default: HomeView,
         navbar: () => import("@/components/NavbarComponent.vue"),
-        // footer: () => import("@/components/FooterComponent.vue"),
+      }
+    },
+    {
+      path: '/quiz',
+      name: 'quiz',
+      components: {
+        default: QuizView,
+        navbar: () => import("@/components/NavbarComponent.vue"),
       }
     },
   ]
