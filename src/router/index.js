@@ -10,7 +10,7 @@ const router = createRouter({
       components: {
         default: HomeView,
         navbar: () => import("@/components/NavbarComponent.vue"),
-        footer: () => import("@/components/FooterComponent.vue"),
+        // footer: () => import("@/components/FooterComponent.vue"),
       }
     },
   ]

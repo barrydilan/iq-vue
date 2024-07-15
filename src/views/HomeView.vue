@@ -2,6 +2,7 @@
 import HeroSection from '../components/HeroSection.vue';
 import QuoteSection from '../components/QuotesSection.vue';
 import BrainSection from '../components/BrainSection.vue';
+import ClosingSection from '../components/ClosingSection.vue';
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import BrainSection from '../components/BrainSection.vue';
     <HeroSection />
     <QuoteSection />
     <BrainSection />
+    <ClosingSection />
   </main>
 </template>
 
