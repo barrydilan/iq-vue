@@ -1,5 +1,4 @@
 <template>
-  <main>
     <section class="hero_section">
       <p class="hero_section--text">Пройдите точный и быстрый</p>
       <div class="hero_section_content">
@@ -15,13 +14,9 @@
         <a class="hero_section_more--link">Подробнее</a>
       </div>
     </section>
-  </main>
 </template>
 
 <style scoped>
-.main {
-}
-
 .hero_section {
   display: flex;
   flex-direction: column;
