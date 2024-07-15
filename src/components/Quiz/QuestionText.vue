@@ -5,11 +5,22 @@ import NextBtn from '../NextBtn.vue'
 <template>
   <section>
     <div class="text-options">
-      <h2>{{ question.text }}</h2>
+      <h2 :class="{'title-withPicture': question.descriptionPicture}">{{ question.text }}</h2>
+      <img
+        v-if="question.descriptionPicture"
+        :src="question.descriptionPicture"
+        alt="Description"
+        class="description-picture"
+      />
       <div
         v-for="(option, index) in question.options"
         :key="index"
-        :class="['text-option', 'radio-group', { selected: selectedOption === option }, { 'small-padding': question.options.length >= 6 }]"
+        :class="[
+          'text-option',
+          'radio-group',
+          { 'selected': selectedOption === option },
+          { 'small-padding': question.options.length >= 6 }
+        ]"
       >
         <input
           type="radio"
@@ -58,6 +69,11 @@ h2 {
   max-width: 80%;
 }
 
+.title-withPicture {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
 .text-options {
   width: 100%;
   display: flex;
@@ -83,8 +99,10 @@ h2 {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: 20px;
-  height: 20px;
+  width: auto;
+  height: auto;
+  min-width: 20px;
+  min-height: 20px;
   border: 2px solid #ccc;
   border-radius: 50%;
   outline: none;
@@ -134,4 +152,9 @@ h2 {
   padding: 8px 8px;
 }
 
+.description-picture {
+  max-width: 160px;
+  height: auto;
+  margin: 10px auto;
+}
 </style>
