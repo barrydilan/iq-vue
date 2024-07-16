@@ -5,7 +5,7 @@ import NextBtn from '../NextBtn.vue'
 <template>
   <section>
     <div class="text-options">
-      <h2 :class="{'title-withPicture': question.descriptionPicture}">{{ question.text }}</h2>
+      <h2 :class="{ 'title-withPicture': question.descriptionPicture }">{{ question.text }}</h2>
       <img
         v-if="question.descriptionPicture"
         :src="question.descriptionPicture"
@@ -18,7 +18,7 @@ import NextBtn from '../NextBtn.vue'
         :class="[
           'text-option',
           'radio-group',
-          { 'selected': selectedOption === option },
+          { selected: selectedOption === option },
           { 'small-padding': question.options.length >= 6 }
         ]"
       >
@@ -59,6 +59,8 @@ export default {
 section {
   position: relative;
   height: 100vh;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 h2 {

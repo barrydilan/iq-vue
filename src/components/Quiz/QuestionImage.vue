@@ -54,6 +54,8 @@ export default {
 section {
   position: relative;
   height: 100vh;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 h2 {
@@ -114,6 +116,6 @@ h2 {
 }
 
 .selected {
-  border-color: var(--accent-color)
+  border-color: var(--accent-color);
 }
 </style>

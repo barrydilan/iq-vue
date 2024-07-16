@@ -143,6 +143,8 @@ h3 {
   align-items: center;
   margin-top: 6px;
   border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .countdown {

@@ -39,20 +39,21 @@ export default {
   },
   methods: {
     selectColor(color) {
-      this.selectedColor = color;
+      this.selectedColor = color
     },
     submitAnswer() {
       this.$emit('answer', this.selectedColor)
     }
   }
 }
-
 </script>
 
 <style scoped>
 section {
   position: relative;
   height: 100vh;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .question-content {

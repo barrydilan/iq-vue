@@ -2,12 +2,10 @@
   <section class="quote_section">
     <div class="quote_section_quote-bg">
       <div class="quote_section_quote_symbol--open"></div>
-
       <p>
         Профессиональный IQ-тест позволяет не только определить коэффициент вашего интеллекта, но и
         выработать список рекомендаций для повышения этого показателя.
       </p>
-
       <div class="quote_section_quote_symbol--close"></div>
     </div>
   </section>
