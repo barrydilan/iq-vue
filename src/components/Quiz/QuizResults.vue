@@ -1,5 +1,7 @@
 <template>
   <section>
+    <img src="../../assets/lightning_1.png" alt="lightning_1" class="lightning-img lightning-1" />
+    <img src="../../assets/lightning_2.png" alt="lightning_2" class="lightning-img lightning-2" />
     <h1>Ваш результат рассчитан:</h1>
     <p>
       <span class="undersore">Вы относитесь к 3% респондентов</span>, чей уровень интеллекта более
@@ -66,6 +68,7 @@ section {
   padding-right: 25px;
   padding-left: 25px;
   padding-top: 46px;
+  position: relative;
 }
 h1 {
   margin-top: 18px;
@@ -123,5 +126,20 @@ h3 {
 
 .countdown {
   font-size: 20px;
+}
+
+.lightning-img {
+  position: absolute;
+  z-index: 0;
+}
+
+.lightning-1 {
+  right: 0;
+  bottom: 50px;
+}
+
+.lightning-2 {
+  bottom: 50px;
+  left: 0;
 }
 </style>
