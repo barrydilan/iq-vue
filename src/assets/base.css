@@ -23,6 +23,7 @@
 :root {
   --accent-color: hsl(47, 100%, 50%);
   --color-text: hsl(0, 0%, 100%);
+  --disabled-color: hsl(0, 0%, 85%);
 }
 
 *,

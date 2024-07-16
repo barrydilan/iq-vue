@@ -1,9 +1,19 @@
 <template>
-  <button>Далее</button>
+  <button :disabled="isDisabled">Далее</button>
 </template>
 
-<style scoped>
+<script>
+export default {
+  props: {
+    isDisabled: {
+      type: Boolean,
+      default: false
+    }
+  }
+}
+</script>
 
+<style scoped>
 button {
   font-size: 14px;
   font-weight: bold;
@@ -13,7 +23,12 @@ button {
   padding: 10px;
   text-transform: uppercase;
   border-radius: 20px;
-  font-family: "Merriweather", serif;
+  font-family: 'Merriweather', serif;
 }
 
+button:disabled {
+  background-color: var(--disabled-color);
+  color: hsl(0, 0%, 56%);
+  cursor: not-allowed;
+}
 </style>

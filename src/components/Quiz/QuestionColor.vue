@@ -65,8 +65,8 @@ section {
 
 h2 {
   margin: 0 auto;
-  margin-bottom: 40px;
-  font-size: 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
   text-align: center;
   max-width: 80%;
 }

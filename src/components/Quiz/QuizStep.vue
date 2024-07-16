@@ -7,17 +7,24 @@
       :options="question.options"
       @answer="answer"
     />
+    <QuestionImage
+      v-else-if="question.type === 'image'"
+      :question="question"
+      @answer="answer"
+    />
   </div>
 </template>
 
 <script>
 import QuestionText from './QuestionText.vue'
 import QuestionColor from './QuestionColor.vue'
+import QuestionImage from './QuestionImage.vue'
 
 export default {
   components: {
     QuestionText,
-    QuestionColor
+    QuestionColor,
+    QuestionImage
   },
   props: {
     question: Object,

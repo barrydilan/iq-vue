@@ -33,7 +33,7 @@ import NextBtn from '../NextBtn.vue'
         <label :for="option">{{ option }}</label>
       </div>
     </div>
-    <NextBtn @click="submitAnswer" class="next_btn" />
+    <NextBtn :disabled="!selectedOption" @click="submitAnswer" class="next_btn" />
   </section>
 </template>
 
@@ -87,7 +87,7 @@ h2 {
 
 .text-option {
   background: hsl(180, 4%, 95%, 0.3);
-  padding: 15px 35px;
+  padding: 10px 30px;
 }
 .radio-group {
   display: flex;
@@ -150,6 +150,7 @@ h2 {
 
 .small-padding {
   padding: 8px 8px;
+  margin-bottom: 0px;
 }
 
 .description-picture {
