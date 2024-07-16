@@ -18,6 +18,7 @@
   height: 100%;
   width: 100%;
   background-image: url('../assets/section_two_bg.png');
+  background-size: cover;
   text-align: center;
   line-height: 23px;
   letter-spacing: 5%;
@@ -34,6 +35,7 @@
   display: flex;
   flex-direction: column;
   background-image: url('../assets/section_two_bg_aura.png');
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 43px 29px 32px 24px;
