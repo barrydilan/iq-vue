@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="isQuizFinished">fin</div>
+    <div v-if="isQuizFinished"><QuizFinish /></div>
     <QuizStep
       v-for="(question, index) in questions"
       :key="index"
@@ -16,13 +16,15 @@
 
 <script>
 import QuizStep from './QuizStep.vue'
+import QuizFinish from './QuizFinish.vue'
 import quizPic1 from '../../assets/quiz_pic-1.png'
 import quizPic2 from '../../assets/quiz_pic-2.png'
 import quizPic3 from '../../assets/quiz_pic-3.png'
 
 export default {
   components: {
-    QuizStep
+    QuizStep,
+    QuizFinish
   },
   data() {
     return {
