@@ -9,9 +9,9 @@
     </nav>
     <div :class="['menu', { 'menu-active': isActive }]">
       <ul>
-        <li @click="toggleMenu"><a href="/">Главная</a></li>
-        <li @click="toggleMenu"><a href="/#info">Информация о тесте</a></li>
-        <li @click="toggleMenu"><a id="active" href="/quiz">Пройти тест</a></li>
+        <li @click="toggleMenu"><a href="/iq-vue//">Главная</a></li>
+        <li @click="toggleMenu"><a href="/iq-vue//#info">Информация о тесте</a></li>
+        <li @click="toggleMenu"><a id="active" href="/iq-vue//quiz">Пройти тест</a></li>
       </ul>
       <img class="close-icon" src="../assets/icon.png" alt="close-icon" @click="toggleMenu" />
     </div>
