@@ -1,74 +1,70 @@
-<script setup>
-import TakeTestBtn from '../components/TakeTestBtn.vue'
-</script>
-
 <template>
-  <section class="hero_section">
-    <p class="hero_section--text">Пройдите точный и быстрый</p>
-    <div class="hero_section_content">
-      <h1 class="hero_section_content--title">Тест на определение IQ</h1>
-      <img src="../assets/brain_ico.png" class="hero_section_content--image" alt="brain_image" />
-      <TakeTestBtn class="hero_section--button" />
+  <section class="hero-section">
+    <p class="hero-section__text">Пройдите точный и быстрый</p>
+    <div class="hero-section__content">
+      <h1 class="hero-section__title">Тест на определение IQ</h1>
+      <img src="@/assets/brain_ico.png" class="hero-section__image" alt="brain_image" />
+      <TakeTestBtn class="hero-section__button" />
     </div>
-    <p class="hero_section--text hero_section--subtext">
+    <p class="hero-section__text hero-section__subtext">
       <span class="accent-text">И получите рекомендации по развитию своего интеллекта</span> и
       улучшению финансового благосостояния и личной жизни
     </p>
-    <div class="hero_section_more">
-      <img src="../assets/arrow_up.png" />
-      <a class="hero_section_more--link">Подробнее</a>
+    <div class="hero-section__more">
+      <img src="@/assets/arrow_up.png" />
+      <a href="#" class="hero-section__more-link">Подробнее</a>
     </div>
   </section>
 </template>
 
+<script setup>
+import TakeTestBtn from '../components/TakeTestBtn.vue'
+</script>
+
 <style scoped>
-.hero_section {
+.hero-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('../assets/bg_img.png');
+  background-image: url('@/assets/bg_img.png');
   height: 100%;
   padding: 27px;
   padding-top: 56px;
   text-align: center;
 }
 
-.hero_section_content--image {
+.hero-section__image {
   width: 150px;
   height: 150px;
 }
 
-.hero_section_content {
+.hero-section__content {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px 0px;
-  padding-left: 48px;
-  padding-right: 48px;
+  padding: 0 48px;
 }
 
-.hero_section--button {
+.hero-section__button {
   margin-bottom: 22px;
 }
 
-.hero_section_content--title {
+.hero-section__title {
   font-size: 30px;
   letter-spacing: 3%;
-  line-height: 30px;
+  line-height: 36px;
   font-family: 'Yeseva One', serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-top: 20px;
   font-weight: semibold;
   color: var(--accent-color);
   text-transform: uppercase;
 }
 
-.hero_section--text {
+.hero-section__text {
   letter-spacing: 5%;
 }
 
-.hero_section--subtext {
+.hero-section__subtext {
   font-size: 15px;
   font-weight: bold;
   line-height: 19px;
@@ -79,7 +75,7 @@ import TakeTestBtn from '../components/TakeTestBtn.vue'
   font-weight: bold;
 }
 
-.hero_section_more {
+.hero-section__more {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,8 +84,13 @@ import TakeTestBtn from '../components/TakeTestBtn.vue'
   letter-spacing: 5%;
 }
 
-.hero_section_more > img {
+.hero-section__more > img {
   width: 16px;
   height: 16px;
+}
+
+.hero-section__more-link {
+  text-decoration: none;
+  color: inherit;
 }
 </style>
