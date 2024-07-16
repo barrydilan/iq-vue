@@ -9,11 +9,11 @@
     </nav>
     <div :class="['menu', { 'menu-active': isActive }]">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
+        <li @click="toggleMenu"><a href="/">Главная</a></li>
+        <li @click="toggleMenu"><a href="/#info">Информация о тесте</a></li>
+        <li @click="toggleMenu"><a id="active" href="/quiz">Пройти тест</a></li>
       </ul>
+      <img class="close-icon" src="../assets/icon.png" alt="close-icon" @click="toggleMenu" />
     </div>
   </div>
 </template>
@@ -33,6 +33,11 @@ nav {
   height: 100%;
   position: relative;
 }
+
+#active {
+  color: var(--accent-color);
+}
+
 .burger-icon {
   position: absolute;
   top: 15px;
@@ -51,17 +56,16 @@ nav {
   background: hsl(0, 0%, 41%);
 }
 
-/* Menu Styles */
 .menu {
   position: fixed;
   top: 0;
-  left: -250px;
-  width: 250px;
+  left: -100%;
+  width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: black;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  padding: 50px 20px;
+  padding: 110px 20px;
   z-index: 1000;
 }
 
@@ -80,7 +84,15 @@ nav {
 
 .menu ul li a {
   text-decoration: none;
-  color: #000;
-  font-size: 18px;
+  color: white;
+  font-size: 16px;
+  font-family: 'Roboto';
+  font-weight: 300;
+}
+
+.close-icon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
 }
 </style>

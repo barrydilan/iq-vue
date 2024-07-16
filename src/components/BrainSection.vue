@@ -3,7 +3,7 @@ import TakeTestBtn from '../components/TakeTestBtn.vue'
 </script>
 
 <template>
-  <section class="brain_section">
+  <section class="brain_section" id="info">
     <p>
       Также по результатам теста <span class="text-bold">вы получите</span> подробные
       <span class="text-bold">cоветы</span> по определению наиболее перспективной
