@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div v-if="!personData">
+    <div v-if="!personData" class="wrapper">
       <img src="../../assets/lightning_1.png" alt="lightning_1" class="lightning-img lightning-1" />
       <img src="../../assets/lightning_2.png" alt="lightning_2" class="lightning-img lightning-2" />
       <h1>Ваш результат рассчитан:</h1>
@@ -80,6 +80,10 @@ export default {
 </script>
 
 <style scoped>
+.wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+}
 section {
   background-image: url('../../assets/bg_img.png');
   height: 100vh;
