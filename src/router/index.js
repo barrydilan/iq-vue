@@ -27,7 +27,7 @@ const router = createRouter({
       name: 'results',
       components: {
         default: ResultsView,
-        navbar: () => import('@/components/NavbarComponent.vue'),
+        navbar: () => import('@/components/ResultsNavbar.vue'),
         footer: () => import('@/components/ResultsFooter.vue')
       }
     }
