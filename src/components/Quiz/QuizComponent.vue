@@ -1,6 +1,7 @@
 <template>
-  <div>
+  <div class="wrapper">
     <div v-if="isQuizFinished"><QuizFinish /></div>
+    <ProgressBar :currentStep="currentStep" :totalSteps="questions.length" />
     <QuizStep
       v-for="(question, index) in questions"
       :key="index"
@@ -15,6 +16,7 @@
 </template>
 
 <script>
+import ProgressBar from '../ProgressBar.vue'
 import QuizStep from './QuizStep.vue'
 import QuizFinish from './QuizFinish.vue'
 import quizPic1 from '../../assets/quiz_pic-1.png'
@@ -24,7 +26,8 @@ import quizPic3 from '../../assets/quiz_pic-3.png'
 export default {
   components: {
     QuizStep,
-    QuizFinish
+    QuizFinish,
+    ProgressBar
   },
   data() {
     return {
@@ -113,3 +116,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.wrapper {
+  position: relative;
+}
+</style>

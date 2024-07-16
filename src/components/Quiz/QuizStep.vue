@@ -7,11 +7,7 @@
       :options="question.options"
       @answer="answer"
     />
-    <QuestionImage
-      v-else-if="question.type === 'image'"
-      :question="question"
-      @answer="answer"
-    />
+    <QuestionImage v-else-if="question.type === 'image'" :question="question" @answer="answer" />
   </div>
 </template>
 
