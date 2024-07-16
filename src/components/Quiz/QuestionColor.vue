@@ -42,7 +42,7 @@ export default {
       this.selectedColor = color;
     },
     submitAnswer() {
-      this.$emit('answer', this.selectColor)
+      this.$emit('answer', this.selectedColor)
     }
   }
 }
