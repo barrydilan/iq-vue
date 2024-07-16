@@ -1,35 +1,44 @@
 <template>
   <section>
-    <img src="../../assets/lightning_1.png" alt="lightning_1" class="lightning-img lightning-1" />
-    <img src="../../assets/lightning_2.png" alt="lightning_2" class="lightning-img lightning-2" />
-    <h1>Ваш результат рассчитан:</h1>
-    <p>
-      <span class="undersore">Вы относитесь к 3% респондентов</span>, чей уровень интеллекта более
-      чем на 15 пунктов отличается от среднего в большую или меньшую сторону!
-    </p>
-    <h2>Скорее получите свой результат!</h2>
-    <div class="disclaimer">
-      В целях защиты персональных данных результат теста, их подробная интерпретация и рекомендации
-      доступны в виде голосового сообщения по звонку с вашего мобильного телефона
+    <div v-if="!personData">
+      <img src="../../assets/lightning_1.png" alt="lightning_1" class="lightning-img lightning-1" />
+      <img src="../../assets/lightning_2.png" alt="lightning_2" class="lightning-img lightning-2" />
+      <h1>Ваш результат рассчитан:</h1>
+      <p>
+        <span class="undersore">Вы относитесь к 3% респондентов</span>, чей уровень интеллекта более
+        чем на 15 пунктов отличается от среднего в большую или меньшую сторону!
+      </p>
+      <h2>Скорее получите свой результат!</h2>
+      <div class="disclaimer">
+        В целях защиты персональных данных результат теста, их подробная интерпретация и
+        рекомендации доступны в виде голосового сообщения по звонку с вашего мобильного телефона
+      </div>
+      <h3>
+        Звоните скорее, запись доступна всего<br /><span class="countdown">{{ countdown }}</span>
+        минут
+      </h3>
+      <button class="call-btn" @click="callResult">
+        <img src="../../assets/phone.png" alt="" /><span>Позвонить и прослушать результат</span>
+      </button>
     </div>
-    <h3>
-      Звоните скорее, запись доступна всего<br /><span class="countdown">{{ countdown }}</span>
-      минут
-    </h3>
-    <button class="call-btn">
-      <img src="../../assets/phone.png" alt="" /><span>Позвонить и прослушать результат</span>
-    </button>
+    <ResultDisplay v-if="personData" :personData="personData" />
   </section>
 </template>
 
 <script>
+import ResultDisplay from '../ResultDisplay.vue'
+
 export default {
+  components: {
+    ResultDisplay
+  },
   data() {
     return {
       countdown: '10:00',
       intervalId: null,
       totalTime: 600,
-      intervalDuration: 1000
+      intervalDuration: 1000,
+      personData: null
     }
   },
   methods: {
@@ -47,6 +56,18 @@ export default {
       const minutes = Math.floor(this.totalTime / 60)
       const seconds = this.totalTime % 60
       this.countdown = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`
+    },
+    async callResult() {
+      try {
+        const response = await fetch('https://swapi.dev/api/people/1/')
+        if (!response.ok) {
+          throw new Error('Network response was not ok')
+        }
+        const data = await response.json()
+        this.personData = data
+      } catch (error) {
+        console.error('Failed to fetch data:', error)
+      }
     }
   },
   mounted() {
