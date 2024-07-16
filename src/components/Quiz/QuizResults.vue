@@ -10,7 +10,10 @@
       В целях защиты персональных данных результат теста, их подробная интерпретация и рекомендации
       доступны в виде голосового сообщения по звонку с вашего мобильного телефона
     </div>
-    <h3>Звоните скорее, запись доступна всего<br /><span>10:00</span> минут</h3>
+    <h3>
+      Звоните скорее, запись доступна всего<br /><span class="countdown">{{ countdown }}</span>
+      минут
+    </h3>
     <button class="call-btn">
       <img src="../../assets/phone.png" alt="" /><span>Позвонить и прослушать результат</span>
     </button>
@@ -21,8 +24,34 @@
 export default {
   data() {
     return {
-      results: 'Here are the results!' // Replace with actual results data
+      countdown: '10:00',
+      intervalId: null,
+      totalTime: 600,
+      intervalDuration: 1000
     }
+  },
+  methods: {
+    startCountdown() {
+      this.intervalId = setInterval(() => {
+        if (this.totalTime > 0) {
+          this.totalTime--
+          this.updateCountdown()
+        } else {
+          clearInterval(this.intervalId)
+        }
+      }, this.intervalDuration)
+    },
+    updateCountdown() {
+      const minutes = Math.floor(this.totalTime / 60)
+      const seconds = this.totalTime % 60
+      this.countdown = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`
+    }
+  },
+  mounted() {
+    this.startCountdown()
+  },
+  beforeUnmount() {
+    clearInterval(this.intervalId)
   }
 }
 </script>
@@ -89,5 +118,9 @@ h3 {
   align-items: center;
   margin-top: 6px;
   border-radius: 5px;
+}
+
+.countdown {
+  font-size: 20px;
 }
 </style>

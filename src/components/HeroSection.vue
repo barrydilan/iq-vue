@@ -1,23 +1,24 @@
 <script setup>
-import TakeTestBtn from "../components/TakeTestBtn.vue";
+import TakeTestBtn from '../components/TakeTestBtn.vue'
 </script>
 
 <template>
-    <section class="hero_section">
-      <p class="hero_section--text">Пройдите точный и быстрый</p>
-      <div class="hero_section_content">
-        <h1 class="hero_section_content--title">Тест на определение IQ</h1>
-        <TakeTestBtn class="hero_section--button" />
-      </div>
-      <p class="hero_section--text hero_section--subtext">
-        <span class="accent-text">И получите рекомендации по развитию своего интеллекта</span> и улучшению финансового благосостояния
-        и личной жизни
-      </p>
-      <div class="hero_section_more">
-        <img src="../assets/arrow_up.png">
-        <a class="hero_section_more--link">Подробнее</a>
-      </div>
-    </section>
+  <section class="hero_section">
+    <p class="hero_section--text">Пройдите точный и быстрый</p>
+    <div class="hero_section_content">
+      <h1 class="hero_section_content--title">Тест на определение IQ</h1>
+      <img src="../assets/brain_ico.png" class="hero_section_content--image" alt="brain_image" />
+      <TakeTestBtn class="hero_section--button" />
+    </div>
+    <p class="hero_section--text hero_section--subtext">
+      <span class="accent-text">И получите рекомендации по развитию своего интеллекта</span> и
+      улучшению финансового благосостояния и личной жизни
+    </p>
+    <div class="hero_section_more">
+      <img src="../assets/arrow_up.png" />
+      <a class="hero_section_more--link">Подробнее</a>
+    </div>
+  </section>
 </template>
 
 <style scoped>
@@ -31,11 +32,16 @@ import TakeTestBtn from "../components/TakeTestBtn.vue";
   text-align: center;
 }
 
+.hero_section_content--image {
+  width: 150px;
+  height: 150px;
+}
+
 .hero_section_content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 150px 0px;
+  gap: 20px 0px;
   padding-left: 48px;
   padding-right: 48px;
 }
@@ -48,7 +54,7 @@ import TakeTestBtn from "../components/TakeTestBtn.vue";
   font-size: 30px;
   letter-spacing: 3%;
   line-height: 30px;
-  font-family: "Yeseva One", serif;
+  font-family: 'Yeseva One', serif;
   font-weight: 400;
   font-style: normal;
   margin-top: 40px;
@@ -85,5 +91,4 @@ import TakeTestBtn from "../components/TakeTestBtn.vue";
   width: 16px;
   height: 16px;
 }
-
 </style>
