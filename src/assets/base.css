@@ -24,6 +24,7 @@
   --accent-color: hsl(47, 100%, 50%);
   --color-text: hsl(0, 0%, 100%);
   --disabled-color: hsl(0, 0%, 85%);
+  --accent-color-green: hsl(144, 71%, 55%);
 }
 
 *,
@@ -37,7 +38,7 @@
 body {
   min-height: 100vh;
   color: var(--color-text);
-  font-family: "PT Serif", serif;
+  font-family: 'PT Serif', serif;
   font-size: 16px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

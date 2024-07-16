@@ -32,7 +32,7 @@ export default {
   transform: translateX(-50%);
   width: 80%;
   height: 10px;
-  background-color: #f3f3f3;
+  background-color: hsl(0, 0%, 95%);
   border-radius: 10px;
   overflow: hidden;
   margin: 10px 0;
@@ -40,7 +40,7 @@ export default {
 
 .progress-bar {
   height: 100%;
-  background-color: #4caf50;
+  background-color: var(--accent-color-green);
   transition: width 0.3s ease;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;

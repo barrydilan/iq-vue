@@ -108,12 +108,12 @@ h2 {
   font-size: 18px;
   text-transform: uppercase;
   font-weight: bold;
-  color: hsl(144, 71%, 55%);
+  color: var(--accent-color-green);
   margin-bottom: 12px;
 }
 
 h3 {
-  color: hsl(144, 71%, 55%);
+  color: var(--accent-color-green);
   font-size: 11px;
 }
 
