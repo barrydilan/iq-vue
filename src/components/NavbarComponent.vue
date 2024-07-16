@@ -1,35 +1,15 @@
 <template>
-  <nav>
-    <div class="burger-icon">
-      <span class="burger-line"></span><span class="burger-line"></span
-      ><span class="burger-line"></span>
-    </div>
-  </nav>
+  <div>
+    <BurgerMenu />
+  </div>
 </template>
 
-<script setup></script>
-*
+<script>
+import BurgerMenu from './BurgerMenu.vue'
 
-<style scoped>
-nav {
-  height: 100%;
-  position: relative;
+export default {
+  components: {
+    BurgerMenu
+  }
 }
-.burger-icon {
-  position: absolute;
-  top: 15px;
-  left: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 3px;
-  cursor: pointer;
-}
-.burger-line {
-  display: block;
-  height: 2px;
-  width: 20px;
-  background: hsl(0, 0%, 41%);
-}
-</style>
+</script>

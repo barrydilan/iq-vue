@@ -1,18 +1,22 @@
 <template>
-  <nav>
-    <div class="burger-icon">
-      <span class="burger-line"></span><span class="burger-line"></span
-      ><span class="burger-line"></span>
-    </div>
+  <div>
+    <BurgerMenu />
     <div class="test-name">
       <img class="brain_ico" src="../assets/brain_ico.png" alt="brain_ico" />
       <h2>Готово!</h2>
     </div>
-  </nav>
+  </div>
 </template>
 
-<script setup></script>
-*
+<script>
+import BurgerMenu from './BurgerMenu.vue'
+
+export default {
+  components: {
+    BurgerMenu
+  }
+}
+</script>
 
 <style scoped>
 nav {
