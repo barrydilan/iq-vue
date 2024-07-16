@@ -19,7 +19,4 @@ header {
   background-color: hsl(0, 0%, 9%);
   z-index: 10;
 }
-main {
-  padding-top: 46px;
-}
 </style>

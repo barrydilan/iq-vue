@@ -65,6 +65,7 @@ section {
   text-align: center;
   padding-right: 25px;
   padding-left: 25px;
+  padding-top: 46px;
 }
 h1 {
   margin-top: 18px;

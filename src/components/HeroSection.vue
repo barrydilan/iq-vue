@@ -29,6 +29,7 @@ import TakeTestBtn from '../components/TakeTestBtn.vue'
   background-image: url('../assets/bg_img.png');
   height: 100%;
   padding: 27px;
+  padding-top: 56px;
   text-align: center;
 }
 
@@ -57,7 +58,7 @@ import TakeTestBtn from '../components/TakeTestBtn.vue'
   font-family: 'Yeseva One', serif;
   font-weight: 400;
   font-style: normal;
-  margin-top: 40px;
+  margin-top: 20px;
   font-weight: semibold;
   color: var(--accent-color);
   text-transform: uppercase;

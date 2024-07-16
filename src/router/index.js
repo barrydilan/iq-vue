@@ -19,7 +19,7 @@ const router = createRouter({
       name: 'quiz',
       components: {
         default: QuizView,
-        navbar: () => import('@/components/NavbarComponent.vue')
+        navbar: () => import('@/components/QuizNavbar.vue')
       }
     },
     {

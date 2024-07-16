@@ -1,9 +1,18 @@
 <template>
-  <button>Пройти тест</button>
+  <button @click="openUrl">Пройти тест</button>
 </template>
 
-<style scoped>
+<script>
+export default {
+  methods: {
+    openUrl() {
+      this.$router.push('quiz')
+    }
+  }
+}
+</script>
 
+<style scoped>
 button {
   font-size: 14px;
   font-weight: bold;
@@ -13,7 +22,6 @@ button {
   padding: 10px;
   text-transform: uppercase;
   border-radius: 20px;
-  font-family: "Merriweather", serif;
+  font-family: 'Merriweather', serif;
 }
-
 </style>
