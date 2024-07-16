@@ -1,35 +1,25 @@
-# iq-test
+## Функциональные особенности
+  Переиспользуемость: Чтобы добавить или удалить шаг теста, достаточно добавить одну строку в массив заданий.
+  
+  Адаптивность: Лендинг разработан с учетом мобильного ферст подхода и должен корректно отображаться на различных устройствах и разрешениях.
+  
+  Форма запроса: По нажатию на кнопку "Звонок" отправляется запрос к API (https://swapi.dev/api/people/1/) для получения информации о персонаже Star Wars.
+  
+  Отображение данных: Полученные данные от API отображаются на странице в специально предусмотренном блоке под кнопкой "Звонок".
 
-This template should help get you started developing with Vue 3 in Vite.
+## Использованные технологии
+  Vue.js: Использовался для организации компонентного подхода и управления состоянием приложения.
+  
+  HTML/CSS: Для разметки и стилизации элементов лендинга.
+  
+  JavaScript: Для работы с API и динамического обновления контента на странице.
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Запуск
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
-
 ```sh
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
